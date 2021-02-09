@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+
+body {
+    font-family: 'Courier New', monospace !important;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: rgb(2,0,36);
+  height:100vh;
+background: linear-gradient(to right,#ab6c82,#685d79); 
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  overflow: hidden;
+}
+::selection {
+  background: transparent;
+}
+
+h4 {
+  font-size: 15px;
+  line-height: 1px;
+  font-family: 'Courier New', monospace !important;
+}
+
+.color1 {
+  color: #1bbc9b;
+} /*MOUNTAIN MEADOW*/
+.color2 {
+  color: #c0392b; /*TALL POPPY*/
+}
+
+.card {
+  color: #013243; /*SHERPA BLUE*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  height: 600px;
+  background: #e0e1dc;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) perspective(2000px);
+  /* box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5); */
+  transition: 1s;
+}
+
+.card:hover {
+  transform: translate(-50%, -50%) perspective(2000px) rotate(15deg) scale(1.2);
+  /* box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5); */
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  /* background: #BAC1BA; */
+  transform-origin: bottom;
+  transform: skewX(-45deg);
+}
+
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 5px;
+  height: 100%;
+  /* background: #92A29C; */
+  transform-origin: left;
+  transform: skewY(-45deg);
+}
+
+.card .imgBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-origin: left;
+  transition: 0.7s;
+}
+
+.card .bark {
+  position: absolute;
+  background: #e0e1dc;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.card .imgBox img {
+  min-width: 250px;
+  max-height: 400px;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-135deg);
+}
+
+.card:hover .bark {
+  opacity: 1;
+  transition: 0.6s;
+  /* box-shadow: 300px 200px 100px rgba(0, 0, 0, .4) inset; */
+}
+
+.card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 0 0 0 10px;
+  z-index: -1;
+  margin-top: 70px;
+}
+
+.card .details .text-left-box p {
+  font-size: 20px;
+  line-height: 5px;
+  transform: rotate(3deg);
+  padding: 0 0 0 20px;
+}
+.text-left-box {
+  margin-left: 20px;
+  margin-top: 50px;
+}
+.card .details h4 {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-right-box {
+  margin-right: 50px;
+  margin-top: 120px;
+}
+.img-bg {
+  /* background-image: url('https://assets.entrepreneur.com/content/3x2/1300/20150923181055-happy-birthday-celebrate-cupcake.jpeg'); */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: right;
+  background: #475c7a;
+}
+.img-bg svg {
+  width: 400px;
+  height: 600px;
+  margin-left: 25px;
+}
+
+#blue_globe,
+#rope_blue_globe,
+#stick_blue_01,
+#stick_blue_02,
+#stick_blue_03 {
+  animation: globe 5s linear infinite;
+}
+#globe_red_01,
+#stick_red_01_01,
+#stick_red_01_02,
+#stick_red_01_03,
+#rope_globe_red_01 {
+  animation: globe 8s linear infinite;
+}
+#globe_red_02,
+#stick_red_02_01,
+#stick_red_02_02,
+#stick_red_02_03,
+#rope_globe_red_02 {
+  animation: globe 10s linear infinite;
+}
+/* stick_red_01_01 */
+#gif_01,
+#gif_02,
+#gif_03,
+#gif_04,
+#gif_05,
+#gif_06,
+#gif_07,
+#gif_08,
+#gif_09 {
+  animation: gift 1s infinite alternate;
+}
+@keyframes globe {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1080px);
+  }
+}
+
+@keyframes gift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(60deg);
+  }
+}
+
+#other {
+  width: 250px;
+  height: 250px;
+  margin-left: 45px;
+}
+
+#square1,
+#square2,
+#square3,
+#square4,
+#square5,
+#square6,
+#square7,
+#square8,
+#square9,
+#square10,
+#square11,
+#square12,
+#square13,
+#square14,
+#square15,
+#square16,
+#square17,
+#square18,
+#square19,
+#square20,
+#square21 {
+  animation: skin_move 2s infinite alternate;
+}
+
+@keyframes skin_move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+img{
+    margin-left: 15px;
+}
+
+@media screen and (max-width:500px){
+    .card{
+        width: 350px;
+  height: 550px;
+  position: fixed;
+    }
+    .card .details .text-left-box p {
+        font-size: 12px;
+      }
+    .img-bg svg {
+        width: 300px;
+        height: 600px;
+        margin-left: 25px;
+    }
+    img{
+        width:35px !important;
+    }
+    h4{
+        font-size:11px !important;
+        margin-left: -15px;
+    }
+    #other {
+        width: 225px;
+        height: 225px;
+        margin-left: 55px;
+      }
+}
